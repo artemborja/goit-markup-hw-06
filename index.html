@@ -418,6 +418,24 @@
             </li>
           </ul>
         </div>
+        <div class="mail">
+          <p class="footer-text">Подпишитесь на рассылку</p>
+          <div class="input-btn">
+            <input
+              class="border-input"
+              type="email"
+              id="emeil"
+              placeholder="E-mail"
+            />
+            <label for="emeil"></label>
+            <button class="hiro-btn" type="button">
+              Подписаться
+              <svg class="plan" width="24px" height="24px">
+                <use href="./images/icons-six.svg#icon-plan"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
       </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
@@ -427,6 +445,62 @@
             <use href="./images/cross-defs.svg#icon-cross"></use>
           </svg>
         </button>
+        <h2 class="modal-head">Оставьте свои данные, мы вам перезвоним</h2>
+        <form class="modal-form" action="">
+          <div class="form-field">
+            <label class="modal-text" for="name">Имя</label
+            ><input class="modal-data" type="text" id="name" placeholder=" " />
+            <svg class="modal-icons" width="12" height="12">
+              <use href="./images/big-sprite.svg#icon-person"></use>
+            </svg>
+          </div>
+          <div class="form-field">
+            <label class="modal-text" for="tel">Телефон </label
+            ><input class="modal-data" type="tel" id="tel" placeholder=" " />
+            <svg class="modal-icons" width="13" height="13">
+              <use href="./images/big-sprite.svg#icon-phonepipe"></use>
+            </svg>
+          </div>
+          <div class="form-field">
+            <label class="modal-text" for="email">Почта</label
+            ><input
+              class="modal-data"
+              type="email"
+              name=""
+              id="email"
+              placeholder=" "
+            />
+            <svg class="modal-icons" width="15" height="12">
+              <use href="./images/big-sprite.svg#icon-black-envelope"></use>
+            </svg>
+          </div>
+          <div class="form-field">
+            <label class="modal-text" for="coments">Комментарий</label
+            ><textarea
+              class="comments"
+              name="coments"
+              id="coments"
+              rows="100%"
+              placeholder="Введите текст"
+            ></textarea>
+          </div>
+          <div class="form-row">
+            <label class="checkbox-text" for="checkbox"
+              >Соглашаюсь с рассылкой и принимаю
+              <input
+                class="checkbox-agree"
+                type="checkbox"
+                name="agree"
+                value="checkbox"
+                id="checkbox"
+                placeholder=" "
+              />
+              <span class="checkbox-icon"></span>
+            </label>
+            <a class="link-conditions" href="#">Условия договора</a>
+          </div>
+        </form>
+        <button class="hiro-btn" type="button">Отправить</button>
       </div>
     </div>
     <script src="./js/modal.js"></script>
