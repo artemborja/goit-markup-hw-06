@@ -218,6 +218,9 @@ li {
 }
 
 .hiro-btn {
+  display: flex;
+  align-items: center;
+  text-align: center;
   font-family: "Roboto", sans-serif;
   color: var(--text-hover-wight);
   background-color: var(--logo-bgr-blue);
@@ -225,24 +228,21 @@ li {
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
-  display: flex;
-  align-items: center;
-  text-align: center;
   cursor: pointer;
   margin-left: auto;
   margin-right: auto;
   padding: 10px 32px;
   border-radius: 4px;
   border: 0;
-  transition-property: background-color;
+  transition-property: background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hiro-btn:hover,
 .hiro-btn:focus {
   background-color: var(--btn-hiro-hover);
-  transition-duration: 250ms;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hiro-btn:active {
@@ -639,7 +639,7 @@ li {
 }
 
 .mail {
-  margin-left: 93px;
+  margin-left: auto;
 }
 
 .input-btn {
@@ -661,6 +661,12 @@ li {
   color: rgba(255, 255, 255, 0.6);
   font-size: 16px;
   line-height: 1.25;
+  transition: border-color 250ms var(--animating);
+}
+
+.border-input:hover,
+.border-input:focus {
+  border-color: var(--logo-bgr-blue);
 }
 
 input[plaseholder="E-mail"] {
@@ -806,6 +812,7 @@ input[plaseholder="E-mail"] {
   transform: translate(-50%, 0);
   height: 100%;
   width: 100%;
+  padding-top: 40px;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
   transition: opacity 250ms var(--animating);
@@ -822,6 +829,7 @@ input[plaseholder="E-mail"] {
   left: 50%;
   height: 581px;
   width: 528px;
+  padding-top: 40px;
   border-radius: 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -871,8 +879,6 @@ input[plaseholder="E-mail"] {
 
 .modal-head {
   text-align: center;
-  margin-top: 40px;
-  margin-bottom: 12px;
   font-size: 20px;
 }
 
@@ -924,7 +930,11 @@ input[plaseholder="E-mail"] {
   fill: var(--logo-bgr-blue);
 }
 
-.modal-data:not(:placeholder-shown) > .modal-icons {
+.modal-data:not(:placeholder-shown) {
+  border-color: var(--logo-bgr-blue);
+}
+
+.modal-data:not(:placeholder-shown) + .modal-icons {
   fill: var(--logo-bgr-blue);
 }
 
@@ -995,6 +1005,10 @@ input[plaseholder="E-mail"] {
   line-height: 1.71;
   color: var(--logo-bgr-blue);
   margin-left: 4px;
+}
+
+.modal-btn {
+  padding: 10px 55px 10px 56px;
 }
 
 .checkbox-icon {
